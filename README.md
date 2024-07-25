@@ -9,7 +9,7 @@ Features:
 - Call to action defaulting to /contact-us#free-quote
 - UI for selecting heading/hero/button colors, as well as assigning author image/name/bio
 
-How to use:
+### How to use:
 
 When creating a new post, it's necessary to select 'LSF Custom Blog Template' as the template.
 Upon installing, 'LSF Blog' will be available in your wp-admin sidebar.
