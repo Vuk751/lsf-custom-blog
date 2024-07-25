@@ -11,7 +11,7 @@ Features:
 
 ### How to use:
 
-When creating a new post, it's necessary to select 'LSF Custom Blog Template' as the template.
+When creating a new post, it's necessary to select 'LSF Single Blog Template' as the template.
 Upon installing, 'LSF Blog' will be available in your wp-admin sidebar.
 
 ### Changing colors:
