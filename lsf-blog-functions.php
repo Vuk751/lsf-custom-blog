@@ -17,7 +17,7 @@ add_action('admin_menu', 'lsf_blog_add_admin_menu');
 function lsf_blog_settings_page() {
     ?>
     <div class="wrap">
-        <h1>LSF Blog Settings</h1>
+        <h1>LSF Blog Setting</h1>
         <form method="post" action="options.php">
             <?php
             settings_fields('lsf_blog_settings');
