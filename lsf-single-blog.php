@@ -281,10 +281,24 @@ while (have_posts()) :
   position: fixed;
 }
 
+/* Active link while scrolling */
+
+.toc-link.active {
+  font-weight: bold;
+  color: black; /* or any color you prefer */
+  text-decoration: underline;
+}
+
 </style>
 
 <script>
-     document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
+        createTableOfContents();
+        highlightTOCOnScroll();
+        initReadingProgress();
+      });
+
+      function createTableOfContents() {
         const toc = document.querySelector(".toc");
         const h2s = document.querySelectorAll(".content-main h2");
 
@@ -294,24 +308,43 @@ while (have_posts()) :
           const link = document.createElement("a");
           link.href = `#${slug}`;
           link.textContent = h2.textContent;
+          link.id = `toc-${slug}`;
           link.classList.add("toc-link");
           toc.appendChild(link);
-
-          // Reading time -> word count / 200 -> rounded down
-
-          let calcReadingTime = Math.floor(
-            document.querySelector(".content-main").innerText.split(" ")
-              .length / 200
-          );
-          let readingTime = (document.querySelector(
-            ".reading-time"
-          ).textContent = calcReadingTime);
         });
-      });
 
-       // Reading progress
+        // Reading time calculation
+        let calcReadingTime = Math.floor(
+          document.querySelector(".content-main").innerText.split(" ").length /
+            200
+        );
+        document.querySelector(".reading-time").textContent = calcReadingTime;
+      }
 
-       window.onload = () => {
+      function highlightTOCOnScroll() {
+        const h2s = document.querySelectorAll(".content-main h2");
+        const tocLinks = document.querySelectorAll(".toc a");
+
+        window.addEventListener("scroll", () => {
+          let current = "";
+          h2s.forEach((h2) => {
+            const sectionTop = h2.offsetTop;
+            if (window.pageYOffset >= sectionTop - 60) {
+              // 60 is an offset, adjust as needed
+              current = h2.getAttribute("id");
+            }
+          });
+
+          tocLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        });
+      }
+
+      function initReadingProgress() {
         const post = document.getElementsByTagName("article")[0];
         const progressBar = document.querySelector(".reading-bar");
         const distance =
@@ -321,8 +354,8 @@ while (have_posts()) :
           const progress = (window.scrollY / distance) * 100;
           progressBar.style.width = `${progress}%`;
         });
-      };
-</script>
+      }
+    </script>
 
 <?php
 endwhile; 
