@@ -12,6 +12,19 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/Vuk751/lsf-custom-blog/',
+	__FILE__,
+	'unique-plugin-or-theme-slug'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
 // Include the functions file
 require_once plugin_dir_path(__FILE__) . 'lsf-blog-functions.php';
 
