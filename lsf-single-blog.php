@@ -74,7 +74,7 @@ while (have_posts()) :
         </div>
       </div>
     </section>
-    
+    <div class="reading-bar"></div>
 
           
      
@@ -271,6 +271,16 @@ while (have_posts()) :
   transform: scale(1.1);
 }
 
+/* Reading Bar */
+
+.reading-bar {
+  bottom: 0;
+  background-color: red;
+  height: 5px;
+  width: 0%;
+  position: fixed;
+}
+
 </style>
 
 <script>
@@ -298,6 +308,20 @@ while (have_posts()) :
           ).textContent = calcReadingTime);
         });
       });
+
+       // Reading progress
+
+       window.onload = () => {
+        const post = document.getElementsByTagName("article")[0];
+        const progressBar = document.querySelector(".reading-bar");
+        const distance =
+          post.clientHeight + post.offsetTop - window.innerHeight;
+
+        window.addEventListener("scroll", () => {
+          const progress = (window.scrollY / distance) * 100;
+          progressBar.style.width = `${progress}%`;
+        });
+      };
 </script>
 
 <?php
