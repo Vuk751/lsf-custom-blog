@@ -4,7 +4,7 @@ Template Name: LSF Blog
 Template Post Type: post
 */
 
-$heading_color = get_option('lsf_blog_heading_color', '#000000');
+$main_color = get_option('lsf_blog_main_color', '#000000');
 $link_color = get_option('lsf_blog_link_color', '#0000FF');
 $button_color = get_option('lsf_blog_button_color', '#008000');
 $author_image_id = get_option('lsf_blog_author_image');
@@ -84,7 +84,7 @@ while (have_posts()) :
 <style>
     :root {
   /* Titles */
-  --heading-color: <?php echo esc_html($heading_color); ?>;
+  --main-color: <?php echo esc_html($main_color); ?>;
   /* Links */
   --link-color: <?php echo esc_html($link_color); ?>;
   --button-color: <?php echo esc_html($button_color); ?>;
@@ -100,7 +100,7 @@ while (have_posts()) :
   justify-content: center;
   color: white;
   flex-direction: column;
-  background-color: blue;
+  background-color: var(--main-color);
 }
 
 .blog-hero h1 {
@@ -147,7 +147,7 @@ while (have_posts()) :
 .content-main h2,
 .content-main h3,
 .content-main h4 {
-  color: var(--heading-color);
+  color: var(--main-color);
 }
 
 .content-main a {
@@ -257,7 +257,7 @@ while (have_posts()) :
 .blog-btn {
   text-decoration: none;
   color: white;
-  background-color: var(--button-color, white);
+  background-color: var(--main-color, white);
   padding: 10px 20px;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
@@ -275,7 +275,7 @@ while (have_posts()) :
 
 .reading-bar {
   bottom: 0;
-  background-color: red;
+  background-color: var(--main-color);
   height: 5px;
   width: 0%;
   position: fixed;
