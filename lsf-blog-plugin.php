@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: LSF Blog Plugin
-Plugin URI: https://https://github.com/Vuk751/lsf-custom-blog
+Plugin URI: https://github.com/Vuk751/lsf-custom-blog
 GitHub Plugin https://github.com/Vuk751/lsf-custom-blog
 Description: Custom blog functionality for LSF
 Version: 1.0
