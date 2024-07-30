@@ -199,6 +199,21 @@ function lsf_blog_register_settings() {
 add_action('admin_init', 'lsf_blog_register_settings');
 
 // Callbacks
+
+function lsf_blog_cta_settings_callback() {
+    echo '<p>Configure your CTA settings:</p>';
+}
+
+function lsf_blog_enable_cta_callback() {
+    $enabled = get_option('lsf_blog_enable_cta');
+    echo '<input type="checkbox" id="lsf_blog_enable_cta" name="lsf_blog_enable_cta" value="1" ' . checked(1, $enabled, false) . '>';
+}
+
+function lsf_blog_cta_text_callback($args) {
+    $option = get_option($args['label_for']);
+    echo '<input type="text" id="' . esc_attr($args['label_for']) . '" name="' . esc_attr($args['label_for']) . '" value="' . esc_attr($option) . '" class="regular-text">';
+}
+
 function lsf_blog_color_settings_callback() {
     echo '<p>Choose colors for your LSF Blog:</p>';
 }
