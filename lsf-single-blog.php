@@ -5,8 +5,8 @@ Template Post Type: post
 */
 
 $main_color = get_option('lsf_blog_main_color', '#000000');
-$link_color = get_option('lsf_blog_link_color', '#0000FF');
-$button_color = get_option('lsf_blog_button_color', '#008000');
+$hero_bg_color = get_option('lsf_blog_hero_bg_color', '#0000FF');
+$hero_title_color = get_option('lsf_blog_hero_heading_color', '#008000');
 $author_image_id = get_option('lsf_blog_author_image');
 $author_image_url = wp_get_attachment_url($author_image_id);
 $author_name = get_option('lsf_blog_author_name');
@@ -88,6 +88,8 @@ while (have_posts()) :
   /* Links */
   --link-color: <?php echo esc_html($link_color); ?>;
   --button-color: <?php echo esc_html($button_color); ?>;
+  --hero-bg-color: <?php echo esc_html($hero_bg_color); ?>;
+  --hero-title-color: <?php echo esc_html($hero_title_color); ?>;
 }
 
 /* BLOG HERO */
@@ -98,9 +100,9 @@ while (have_posts()) :
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--hero-title-color);
   flex-direction: column;
-  background-color: var(--main-color);
+  background-color: var(--hero-bg-color);
 }
 
 .blog-hero h1 {
@@ -152,7 +154,7 @@ while (have_posts()) :
 
 .content-main a {
   font-weight: 700;
-  color: blue;
+  color: var(--main-color);
 }
 
 /* Table Of Contents */

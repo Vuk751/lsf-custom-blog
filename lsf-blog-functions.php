@@ -55,22 +55,23 @@ function lsf_blog_register_settings() {
         array('label_for' => 'lsf_blog_main_color')
     );
 
-    // add_settings_field(
-    //     'lsf_blog_link_color',
-    //     'Link Color',
+    	// add_settings_field(
+    //     'lsf_blog_hero_bg_color',
+    //     'Hero Background Color',
     //     'lsf_blog_color_field_callback',
     //     'lsf_blog_settings',
     //     'lsf_blog_color_settings',
-    //     array('label_for' => 'lsf_blog_link_color')
+    //     array('label_for' => 'lsf_blog_hero_bg_color')
     // );
+    // 
 
     // add_settings_field(
-    //     'lsf_blog_button_color',
-    //     'Button Color',
+    //     'lsf_blog_hero_heading_color',
+    //     'Hero Title Color',
     //     'lsf_blog_color_field_callback',
     //     'lsf_blog_settings',
     //     'lsf_blog_color_settings',
-    //     array('label_for' => 'lsf_blog_button_color')
+    //     array('label_for' => 'lsf_blog_hero_heading_color')
     // );
 	
 	
