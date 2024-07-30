@@ -32,8 +32,8 @@ function lsf_blog_settings_page() {
 // Register settings
 function lsf_blog_register_settings() {
     register_setting('lsf_blog_settings', 'lsf_blog_main_color');
-    register_setting('lsf_blog_settings', 'lsf_blog_link_color');
-    register_setting('lsf_blog_settings', 'lsf_blog_button_color');
+    register_setting('lsf_blog_settings', 'lsf_blog_hero_bg_color');
+    register_setting('lsf_blog_settings', 'lsf_hero_heading_color');
     register_setting('lsf_blog_settings', 'lsf_blog_enable_cta');
     register_setting('lsf_blog_settings', 'lsf_blog_cta_heading');
     register_setting('lsf_blog_settings', 'lsf_blog_cta_button_text');
@@ -55,24 +55,24 @@ function lsf_blog_register_settings() {
         array('label_for' => 'lsf_blog_main_color')
     );
 
-    	// add_settings_field(
-    //     'lsf_blog_hero_bg_color',
-    //     'Hero Background Color',
-    //     'lsf_blog_color_field_callback',
-    //     'lsf_blog_settings',
-    //     'lsf_blog_color_settings',
-    //     array('label_for' => 'lsf_blog_hero_bg_color')
-    // );
-    // 
+    	add_settings_field(
+        'lsf_blog_hero_bg_color',
+        'Hero Background Color',
+        'lsf_blog_color_field_callback',
+        'lsf_blog_settings',
+        'lsf_blog_color_settings',
+        array('label_for' => 'lsf_blog_hero_bg_color')
+    );
+    
 
-    // add_settings_field(
-    //     'lsf_blog_hero_heading_color',
-    //     'Hero Title Color',
-    //     'lsf_blog_color_field_callback',
-    //     'lsf_blog_settings',
-    //     'lsf_blog_color_settings',
-    //     array('label_for' => 'lsf_blog_hero_heading_color')
-    // );
+    add_settings_field(
+        'lsf_blog_hero_heading_color',
+        'Hero Title Color',
+        'lsf_blog_color_field_callback',
+        'lsf_blog_settings',
+        'lsf_blog_color_settings',
+        array('label_for' => 'lsf_blog_hero_heading_color')
+    );
 	
 	
 // 	ZEZANJE KRECE

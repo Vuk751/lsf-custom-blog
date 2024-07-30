@@ -11,6 +11,10 @@ $author_image_id = get_option('lsf_blog_author_image');
 $author_image_url = wp_get_attachment_url($author_image_id);
 $author_name = get_option('lsf_blog_author_name');
 $author_bio = get_option('lsf_blog_author_bio');
+$cta_enabled = get_option('lsf_blog_enable_cta');
+$cta_heading = get_option('lsf_blog_cta_heading');
+$cta_button_text = get_option('lsf_blog_cta_button_text');
+$cta_link = get_option('lsf_blog_cta_link');
 
 get_header();
 
@@ -65,12 +69,14 @@ while (have_posts()) :
               <?php echo wp_kses_post($author_bio); ?>
             </p>
           </div>
-          <div class="blog-cta">
-            <h4>Need our services?</h4>
-            <a href="/contact-us#free-quote">
-              <div class="blog-btn">Free Quote</div>
-            </a>
-          </div>
+         <?php if ($cta_enabled) : ?>
+    <div class="blog-cta">
+        <h4><?php echo esc_html($cta_heading); ?></h4>
+        <a href="<?php echo esc_url($cta_link); ?>">
+            <div class="blog-btn"><?php echo esc_html($cta_button_text); ?></div>
+        </a>
+    </div>
+<?php endif; ?>
         </div>
       </div>
     </section>
