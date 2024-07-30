@@ -300,6 +300,14 @@ function lsf_blog_enqueue_admin_scripts($hook_suffix) {
                 $("#lsf-blog-author-image-preview").attr("src", "").css("display", "none");
                 $(this).hide();
             });
+             // CTA Fields
+            function toggleCTAFields() {
+                var isChecked = $("#lsf_blog_enable_cta").is(":checked");
+                $("[id^=lsf_blog_cta_]").not("#lsf_blog_enable_cta").closest("tr").toggle(isChecked);
+            }
+
+            $("#lsf_blog_enable_cta").on("change", toggleCTAFields);
+            toggleCTAFields(); // Run on page load
         });
     ');
 }
