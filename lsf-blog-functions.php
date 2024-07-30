@@ -33,7 +33,7 @@ function lsf_blog_settings_page() {
 function lsf_blog_register_settings() {
     register_setting('lsf_blog_settings', 'lsf_blog_main_color');
     register_setting('lsf_blog_settings', 'lsf_blog_hero_bg_color');
-    register_setting('lsf_blog_settings', 'lsf_hero_heading_color');
+    register_setting('lsf_blog_settings', 'lsf_blog_hero_heading_color');
     register_setting('lsf_blog_settings', 'lsf_blog_enable_cta');
     register_setting('lsf_blog_settings', 'lsf_blog_cta_heading');
     register_setting('lsf_blog_settings', 'lsf_blog_cta_button_text');

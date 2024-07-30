@@ -124,7 +124,7 @@ while (have_posts()) :
 .blog-details .dot {
   height: 5px;
   width: 5px;
-  background-color: white;
+  background-color: var(--hero-title-color);
 }
 
 .blog-details-inner p {
