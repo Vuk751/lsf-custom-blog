@@ -34,6 +34,10 @@ function lsf_blog_register_settings() {
     register_setting('lsf_blog_settings', 'lsf_blog_main_color');
     register_setting('lsf_blog_settings', 'lsf_blog_link_color');
     register_setting('lsf_blog_settings', 'lsf_blog_button_color');
+    register_setting('lsf_blog_settings', 'lsf_blog_enable_cta');
+    register_setting('lsf_blog_settings', 'lsf_blog_cta_heading');
+    register_setting('lsf_blog_settings', 'lsf_blog_cta_button_text');
+    register_setting('lsf_blog_settings', 'lsf_blog_cta_link');
 
     add_settings_section(
         'lsf_blog_color_settings',
@@ -105,6 +109,91 @@ function lsf_blog_register_settings() {
         'lsf_blog_author_bio_callback',
         'lsf_blog_settings',
         'lsf_blog_author_settings'
+    );
+
+     // CTA
+     add_settings_section(
+        'lsf_blog_cta_settings',
+        'CTA Settings',
+        'lsf_blog_cta_settings_callback',
+        'lsf_blog_settings'
+    );
+
+    add_settings_field(
+        'lsf_blog_enable_cta',
+        'Enable CTA',
+        'lsf_blog_enable_cta_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings'
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_heading',
+        'CTA Heading',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_heading')
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_button_text',
+        'CTA Button Text',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_button_text')
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_link',
+        'CTA Link',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_link')
+    );
+	
+	  add_settings_section(
+        'lsf_blog_cta_settings',
+        'CTA Settings',
+        'lsf_blog_cta_settings_callback',
+        'lsf_blog_settings'
+    );
+
+    add_settings_field(
+        'lsf_blog_enable_cta',
+        'Enable CTA',
+        'lsf_blog_enable_cta_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings'
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_heading',
+        'CTA Heading',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_heading')
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_button_text',
+        'CTA Button Text',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_button_text')
+    );
+
+    add_settings_field(
+        'lsf_blog_cta_link',
+        'CTA Link',
+        'lsf_blog_cta_text_callback',
+        'lsf_blog_settings',
+        'lsf_blog_cta_settings',
+        array('label_for' => 'lsf_blog_cta_link')
     );
 }
 add_action('admin_init', 'lsf_blog_register_settings');
