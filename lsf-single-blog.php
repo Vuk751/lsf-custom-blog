@@ -256,6 +256,11 @@ html, body{
   display: none;
 }
 
+.author-details img{
+	height: 88px;
+	width: 88px;
+}
+
 @media (min-width: 768px) {
   .author-details {
     display: block;
@@ -275,6 +280,11 @@ html, body{
 
 .author-bottom {
   margin-top: 3em;
+}
+
+.author-bottom img{
+		height: 88px;
+		width: 88px;
 }
 
 /* BLOG QUOTE CTA */
