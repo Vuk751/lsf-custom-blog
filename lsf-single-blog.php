@@ -23,7 +23,7 @@ while (have_posts()) :
 ?>
 
 <!-- HERO -->
-<section class="blog-hero">
+<section class="lsf-blog-hero">
       <h1><?php the_title(); ?></h1>
       <div class="blog-details">
         <p>By <b><?php echo esc_html($author_name); ?></b></p>
@@ -122,7 +122,7 @@ while (have_posts()) :
 
 /* BLOG HERO */
 
-.blog-hero {
+.lsf-blog-hero {
   text-align: center;
   padding: 40px 0px 40px;
   display: flex;
@@ -133,7 +133,7 @@ while (have_posts()) :
   background-color: var(--hero-bg-color);
 }
 
-.blog-hero h1 {
+.lsf-blog-hero h1 {
   font-size: 46px;
   max-width: 550px;
 }
