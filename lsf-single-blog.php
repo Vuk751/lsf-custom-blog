@@ -80,6 +80,28 @@ while (have_posts()) :
         </div>
       </div>
     </section>
+
+    <!-- Share this post -->
+  <div class="mx-auto mt-5">
+		<h3 class="text-center">
+			<b>Share This Post</b>
+			<div class="mt-3 gap-2 d-flex align-items-center justify-content-center">
+				<a href="https://www.facebook.com/sharer/sharer.php?u= <?php the_permalink(); ?>">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="var(--main-color)" width="60" height="40" viewBox="0 0 90 91"><g data-name="Group 677" transform="translate(193 656)"><rect data-name="Rectangle 731" 								width="90" height="91" rx="20" transform="translate(-193 -656)"/><path data-name="Path 4132" d="M-135.615-627.325h7.024v-11.877a98 98 0 0 0-10.237-.523c-10.162 0-17.112 									6.2-17.112 17.56v9.789h-11.47v13.3h11.47V-565h13.75v-34.075h11.432l1.719-13.3h-13.151v-8.482c0-3.923 1.046-6.468 6.575-6.468" fill="#fff"/></g></svg>
+				</div></a>
+				<a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?><?php the_title(); ?>">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="var(--main-color)" width="60" height="40" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" fill-rule="nonzero" d="M323.74 148.35h36.12l-78.91 90.2 92.83 122.73h-72.69l-56.93-74.43-65.15 74.43h-36.14l84.4-96.47-89.05-116.46h74.53l51.46 68.04zm-12.68 191.31h20.02l-129.2-170.82H180.4z"/></svg>
+				</div>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>">
+					<div>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="var(--main-color)" width="60" height="40" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 509.64"><rect width="512" height="509.64" rx="115.61" ry="115.61"/><path fill="#fff" d="M204.97 197.54h64.69v33.16h.94c9.01-16.16 31.04-33.16 63.89-33.16 68.31 0 80.94 42.51 80.94 97.81v116.92h-67.46l-.01-104.13c0-23.81-.49-54.45-35.08-54.45-35.12 0-40.51 25.91-40.51 52.72v105.86h-67.4zm-38.23-65.09c0 19.36-15.72 35.08-35.08 35.08-19.37 0-35.09-15.72-35.09-35.08 0-19.37 15.72-35.08 35.09-35.08 19.36 0 35.08 15.71 35.08 35.08m-70.17 65.09h70.17v214.73H96.57z"/></svg>
+				</div></a>
+			</div>
+		</h3>
+</div>
     <div class="reading-bar"></div>
 
           
