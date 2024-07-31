@@ -120,6 +120,25 @@ while (have_posts()) :
   --hero-title-color: <?php echo esc_html($hero_title_color); ?>;
 }
 
+/* Overflow visible so that the sticky can work */
+html, body{
+		overflow-x: visible !important;
+	}
+
+/* Force the nav to match the hero -  If/when the nav is nav-container - usually the LSF tool */
+	.nav-container{
+		background-color: var(--hero-bg-color);
+	}
+	
+	.nav-container .nav-link{
+		color: (--hero-title-color);
+	}
+	
+	.lsf-btn-primary{
+		background-color: var(--hero-title-color) !important;
+		color: var(--hero-bg-color) !important;
+	}
+
 /* BLOG HERO */
 
 .lsf-blog-hero {
@@ -208,7 +227,7 @@ while (have_posts()) :
     border-bottom: none;
     border-right: 1px solid gray;
     position: sticky;
-    top: 20px;
+    top: 60px;
   }
 }
 
@@ -276,7 +295,7 @@ while (have_posts()) :
 @media (min-width: 768px) {
   .blog-cta {
     position: sticky;
-    top: 20px;
+    top: 90px;
   }
 }
 
