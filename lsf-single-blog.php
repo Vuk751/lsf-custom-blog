@@ -381,27 +381,40 @@ html, body{
       }
 
       function highlightTOCOnScroll() {
-        const h2s = document.querySelectorAll(".content-main h2");
-        const tocLinks = document.querySelectorAll(".toc a");
+  const h2s = document.querySelectorAll(".content-main h2");
+  const tocLinks = document.querySelectorAll(".toc a");
 
-        window.addEventListener("scroll", () => {
-          let current = "";
-          h2s.forEach((h2) => {
-            const sectionTop = h2.offsetTop;
-            if (window.pageYOffset >= sectionTop - 60) {
-              // 60 is an offset, adjust as needed
-              current = h2.getAttribute("id");
-            }
-          });
+  const observerOptions = {
+    root: null,
+    rootMargin: "-50px 0px -40% 0px", // Adjust these values as needed
+    threshold: 0
+  };
 
-          tocLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-              link.classList.add("active");
-            }
-          });
-        });
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        updateTOCHighlight(id);
       }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  h2s.forEach(h2 => {
+    observer.observe(h2);
+  });
+
+  function updateTOCHighlight(currentId) {
+    tocLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${currentId}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+}
+highlightTOCOnScroll();
 
       function initReadingProgress() {
         const post = document.getElementsByTagName("article")[0];
