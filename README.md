@@ -10,7 +10,7 @@ Features:
 - Hero section with reading time and author name
 - Table Of Contents generated based on H2 tags in post
 - Author Box with author details
-- Call to action defaulting to /contact-us#free-quote
+- Call to action with configurable link
 - UI for selecting heading/hero/button colors, as well as assigning author image/name/bio
 
 ### How to use:
