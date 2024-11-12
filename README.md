@@ -13,9 +13,10 @@ Features:
 - UI for selecting heading/hero/button colors, as well as assigning author image/name/bio
 
 ### How to use:
-
-When creating a new post, it's necessary to select 'LSF Single Blog Template' as the template.
 Upon installing, 'LSF Blog' will be available in your wp-admin sidebar.
+When creating a new post, it's necessary to select 'LSF Single Blog Template' as the template.
+From there, you can insert content as usual, the plugin will create the columns, the table of contents, etc.
+
 
 ### Changing colors:
 
