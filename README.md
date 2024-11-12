@@ -2,6 +2,9 @@
 
 ## Bootstrap-based custom blog for LSF Wordpress installations
 
+![image](https://github.com/user-attachments/assets/55081ed8-2cb5-493a-b314-ea6eee8dba6f)
+
+
 Features:
 
 - Table Of Contents generated based on H2 tags in post
