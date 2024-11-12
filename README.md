@@ -1,17 +1,18 @@
 # lsf-custom-blog
 
-## Bootstrap-based custom blog for LSF Wordpress installations
+## Bootstrap-based responsive custom blog for LSF Wordpress installations
 
 ![image](https://github.com/user-attachments/assets/516ba4a0-5e48-4070-b2e7-ba7cb6c954ef)
 
 
 
 Features:
-- Hero section with reading time and author name
-- Table Of Contents generated based on H2 tags in post
-- Author Box with author details
-- Call to action with configurable link
-- UI for selecting heading/hero/button colors, as well as assigning author image/name/bio
+- Hero section with reading time and author name,
+- Table Of Contents generated based on H2 tags in post,
+- Author Box with author details,
+- Call to action with configurable link,
+- UI for selecting heading/hero/button colors, as well as assigning author image/name/bio,
+- Fully responsive design for smaller devices.
 
 ### How to use:
 Upon installing, 'LSF Blog' will be available in your wp-admin sidebar.
