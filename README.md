@@ -2,7 +2,8 @@
 
 ## Bootstrap-based custom blog for LSF Wordpress installations
 
-![image](https://github.com/user-attachments/assets/55081ed8-2cb5-493a-b314-ea6eee8dba6f)
+![image](https://github.com/user-attachments/assets/516ba4a0-5e48-4070-b2e7-ba7cb6c954ef)
+
 
 
 Features:
