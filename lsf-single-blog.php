@@ -185,6 +185,7 @@ html, body{
 }
 	
 	.content-main img{
+	    margin-block: 15px;
 		border-radius: 10px;
 	}
 
